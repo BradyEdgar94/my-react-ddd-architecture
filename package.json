@@ -1,7 +1,7 @@
 {
   "name": "my-react-ddd-architecture",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/main.js",
   "repository": "git@github.com:ProgRiro/my-react-ddd-architecture.git",
   "author": "progriro <progriro@gmail.com>",
   "license": "MIT",
