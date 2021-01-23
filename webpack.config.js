@@ -26,11 +26,17 @@ module.exports = {
   },
   // import 文で .ts や .tsx ファイルを解決するため
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json"],
+    extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
+    alias: {
+      "@": resolve(__dirname, "src"),
+    },
   },
   // ES5(IE11等)向けの指定（webpack 5以上で必要）
   target: ["web", "es5"],
   devtool: "inline-source-map",
+  watchOptions: {
+    ignored: /node_modules/,
+  },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
