@@ -11,4 +11,8 @@ export class Price {
   get value() {
     return this._value;
   }
+
+  get toString() {
+    return `￥${this._value}`;
+  }
 }
