@@ -1,6 +1,8 @@
-const path = require("path");
+import webpack from "webpack";
+import "webpack-dev-server";
+import { resolve, join } from "path";
 
-module.exports = {
+const config: webpack.Configuration = {
   // モード値を production に設定すると最適化された状態で、
   // development に設定するとソースマップ有効でJSファイルが出力される
   mode: "development",
@@ -10,7 +12,7 @@ module.exports = {
   // ファイルの出力設定
   output: {
     //  出力ファイルのディレクトリ名
-    path: path.join(__dirname, "dist"),
+    path: join(__dirname, "dist"),
     // 出力ファイル名
     filename: "main.js",
   },
@@ -38,7 +40,7 @@ module.exports = {
     ignored: /node_modules/,
   },
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    contentBase: join(__dirname, "dist"),
     compress: true,
     port: 8080,
     inline: true,
@@ -47,3 +49,5 @@ module.exports = {
     watchContentBase: true,
   },
 };
+
+export default config;
