@@ -11,4 +11,9 @@ describe("Domain/ValueObject/Price", () => {
     const price = new Price(100);
     expect(price.value).toBe(100);
   });
+
+  test("Price.toStringで円マークが付加された金額が取得できる", () => {
+    const price = new Price(100);
+    expect(price.toString).toBe(`￥${price.value}`);
+  });
 });
