@@ -10,5 +10,9 @@
     "lib": ["dom", "es6"]
   },
   "include": ["src"],
-  "compileOnSave": false
+  "compileOnSave": false,
+  "baseUrl": ".",
+  "paths": {
+    "@/*": ["./src/*"]
+  }
 }
