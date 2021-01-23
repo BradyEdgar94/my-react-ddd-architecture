@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { createElement } from "react";
-import { render } from "react-dom";
 import { Price } from "./Domain/ValueObject/Price";
 
 export const App = () => {
@@ -17,7 +15,7 @@ export const App = () => {
   return (
     <div>
       <h1>Hello React!</h1>
-      <p>{price}</p>
+      <p>{price.value}</p>
       <input
         value={input}
         onChange={(e) => setInput(e.target.value)}
@@ -27,5 +25,3 @@ export const App = () => {
     </div>
   );
 };
-
-render(createElement(App), document.getElementById("app"));
