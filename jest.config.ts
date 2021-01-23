@@ -1,6 +1,5 @@
 import type { Config } from "@jest/types";
 
-// Sync object
 const config: Config.InitialOptions = {
   verbose: true,
   testMatch: ["**/__tests__/**/*.test.+(ts|tsx|js|jsx)"],
@@ -13,4 +12,5 @@ const config: Config.InitialOptions = {
     "^.+\\.(ts|tsx)$": "ts-jest",
   },
 };
+
 export default config;
