@@ -1,6 +1,7 @@
 import webpack from "webpack";
 import "webpack-dev-server";
 import { resolve, join } from "path";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
 const config: webpack.Configuration = {
   // モード値を production に設定すると最適化された状態で、
@@ -48,6 +49,9 @@ const config: webpack.Configuration = {
     open: true,
     watchContentBase: true,
   },
+  plugins: [
+    new HtmlWebpackPlugin({ template: join(__dirname, "src", "index.html") }),
+  ],
 };
 
 export default config;
