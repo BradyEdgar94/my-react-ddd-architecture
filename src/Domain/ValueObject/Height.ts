@@ -1,0 +1,18 @@
+export class Height {
+  private readonly _value: number;
+  constructor(value: number) {
+    if (value <= 0) {
+      throw new Error(`不正な身長 : ${value}`);
+    } else {
+      this._value = value;
+    }
+  }
+
+  get value() {
+    return this._value;
+  }
+
+  get toString() {
+    return `${this._value}cm`;
+  }
+}
