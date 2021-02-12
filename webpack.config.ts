@@ -23,6 +23,7 @@ const config: webpack.Configuration = {
         test: /\.tsx?$/,
         // TypeScript をコンパイルする
         use: "ts-loader",
+        exclude: /node_modules/,
       },
     ],
   },
