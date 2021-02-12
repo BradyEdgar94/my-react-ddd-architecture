@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "wouter";
+import { LinkButton } from "../atoms";
 
 const Home = () => {
   return (
     <div>
       <h1>Home</h1>
-      <Link to="/about">About</Link>
+      <LinkButton to="/about" text="About" />
     </div>
   );
 };
