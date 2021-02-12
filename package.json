@@ -6,7 +6,10 @@
   "author": "progriro <progriro@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-cli serve --mode development",
+    "dev": "yarn env:dev webpack serve --mode development",
+    "build": "yarn env:pro webpack --mode production",
+    "env:dev": "NODE_ENV=development",
+    "env:pro": "NODE_ENV=production",
     "test": "jest"
   },
   "devDependencies": {
