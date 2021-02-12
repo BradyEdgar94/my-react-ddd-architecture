@@ -35,7 +35,7 @@ const config: webpack.Configuration = {
   },
   // ES5(IE11等)向けの指定（webpack 5以上で必要）
   target: ["web", "es5"],
-  devtool: "inline-source-map",
+  devtool: process.env.NODE_ENV === "production" ? false : "inline-source-map",
   watchOptions: {
     ignored: /node_modules/,
   },
