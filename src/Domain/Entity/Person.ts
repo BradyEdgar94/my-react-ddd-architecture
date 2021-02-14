@@ -1,12 +1,25 @@
-import { Age, Height, Weight } from "../ValueObject";
+import { Age, FullName, Height, Weight } from "../ValueObject";
 
 export class Person {
   constructor(
-    public readonly name: string,
+    private readonly _personId: number,
+    private readonly _name: FullName,
     private readonly _age: Age,
     private readonly _height: Height,
     public readonly _weight: Weight
   ) {}
+
+  get fullName() {
+    return this._name.fullName;
+  }
+
+  get firstName() {
+    return this._name.firstName;
+  }
+
+  get lastName() {
+    return this._name.lastName;
+  }
 
   get age() {
     return this._age.value;
