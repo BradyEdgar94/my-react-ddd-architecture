@@ -9,6 +9,10 @@ export class Person {
     public readonly _weight: Weight
   ) {}
 
+  get personId() {
+    return this._personId;
+  }
+
   get fullName() {
     return this._name.fullName;
   }
