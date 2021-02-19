@@ -1,9 +1,9 @@
 import React, { lazy, Suspense } from "react";
 import { Switch, Route } from "wouter";
 
-const Home = lazy(() => import("./Components/page/Home"));
-const About = lazy(() => import("./Components/page/About"));
-const Service = lazy(() => import("./Components/page/Service"));
+const Home = lazy(() => import("../Components/page/Home"));
+const About = lazy(() => import("../Components/page/About"));
+const Service = lazy(() => import("../Components/page/Service"));
 
 export const Router = () => {
   return (
