@@ -6,6 +6,7 @@ const About = () => {
     <div>
       <h1>About</h1>
       <LinkButton to="/" text="Home" color="secondary" />
+      <LinkButton to="/service" text="Service" />
     </div>
   );
 };
