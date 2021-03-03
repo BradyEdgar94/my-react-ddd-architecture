@@ -11,7 +11,7 @@ export interface PersonObj {
 }
 
 export class PersonFactory {
-  static createFromObj(person: PersonObj) {
+  static factory(person: PersonObj) {
     return new Person(
       person.person_id,
       new FullName(person.first_name, person.last_name),
