@@ -11,13 +11,13 @@ export interface PersonObj {
 }
 
 export class PersonFactory {
-  static createFromObj(obj: PersonObj) {
+  static createFromObj(person: PersonObj) {
     return new Person(
-      obj.person_id,
-      new FullName(obj.first_name, obj.last_name),
-      new Age(obj.age),
-      new Height(obj.height),
-      new Weight(obj.weight)
+      person.person_id,
+      new FullName(person.first_name, person.last_name),
+      new Age(person.age),
+      new Height(person.height),
+      new Weight(person.weight)
     );
   }
 }
